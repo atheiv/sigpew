@@ -1,0 +1,4 @@
+sigpew - suckless itty plaintext editor for wayland
+
+
+Dependencies: wayland-client
