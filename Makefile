@@ -1,2 +1,2 @@
 sigpew:
-	gcc -l wayland-client sigpew.c -o sigpew
+	gcc -lwayland-client sigpew.c -o sigpew

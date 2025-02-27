@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include <wayland-client.c>
+#include <wayland-client.h>
 
 
 int main()
