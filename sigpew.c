@@ -8,7 +8,7 @@ struct wl_display *display = NULL;
 struct wl_compositor *compositor = NULL;
 
 static void
-global_registry_handler(void *data, struct wl_registry *registry, uint32_t id,
+registry_handler(void *data, struct wl_registry *registry, uint32_t id,
 	       const char *interface, uint32_t version)
 {
     printf("Got a registry event for %s id %d\n", interface, id);
@@ -20,14 +20,14 @@ global_registry_handler(void *data, struct wl_registry *registry, uint32_t id,
 }
 
 static void
-global_registry_remover(void *data, struct wl_registry *registry, uint32_t id)
+registry_remover(void *data, struct wl_registry *registry, uint32_t id)
 {
     printf("Got a registry losing event for %d\n", id);
 }
 
 static const struct wl_registry_listener registry_listener = {
-    global_registry_handler,
-    global_registry_remover
+    registry_handler,
+    registry_remover
 };
 
 
